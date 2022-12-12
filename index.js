@@ -22,6 +22,6 @@ app.use("/fe02-typical",FE02TypicalRouter);
 app.use("/fe07-div1",Fe07Div01Router);
 app.use("/fe07-div2",Fe07Div02Router);
 
-app.listen(8000, ()=>{
+app.listen(process.env.PORT||8000, ()=>{
     console.log("server is running......")
 });
