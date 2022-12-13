@@ -8,6 +8,7 @@ const dotenv = require("dotenv");
 const FE02TypicalRouter = require("./routes/FE02TypicalRoute/FE02Typical")
 const Fe07Div01Router =require("./routes/FE07STSOFTWARERoute/FE07Div1Router")
 const Fe07Div02Router =require("./routes/FE07STSOFTWARERoute/FE07Div2Router")
+const PortfolioRouter =require("./routes/PortfolioRoute/PortfolioRouter")
 dotenv.config()
 mongoose.set('strictQuery', true);
 
@@ -21,6 +22,7 @@ app.use(morgan("common"))
 app.use("/fe02-typical",FE02TypicalRouter);
 app.use("/fe07-div1",Fe07Div01Router);
 app.use("/fe07-div2",Fe07Div02Router);
+app.use("/portfolio",PortfolioRouter);
 
 app.listen(process.env.PORT||8000, ()=>{
     console.log("server is running......")
