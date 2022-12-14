@@ -5,10 +5,17 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const morgan = require('morgan');
 const dotenv = require("dotenv");
+//////////////////////////////////////////////////////////////////////////////
+
 const FE02TypicalRouter = require("./routes/FE02TypicalRoute/FE02Typical")
 const Fe07Div01Router =require("./routes/FE07STSOFTWARERoute/FE07Div1Router")
 const Fe07Div02Router =require("./routes/FE07STSOFTWARERoute/FE07Div2Router")
 const PortfolioRouter =require("./routes/PortfolioRoute/PortfolioRouter")
+const stDigitalIconRouter = require("./routes/StDigitalRoute/stDigitaliconRouter");
+const stDigitalImageRouter = require("./routes/StDigitalRoute/stDigitalImageRouter");
+
+
+/////////////////////////////////////////////////
 dotenv.config()
 mongoose.set('strictQuery', true);
 
@@ -18,11 +25,14 @@ mongoose.connect((process.env.MONGODB_URL),() => {
 app.use(cors())
 app.use(morgan("common"))
     app.use(bodyParser.json({limit:"50mb"}))
-
+////////////////////////////////////////////////////////////////////
 app.use("/fe02-typical",FE02TypicalRouter);
 app.use("/fe07-div1",Fe07Div01Router);
 app.use("/fe07-div2",Fe07Div02Router);
 app.use("/portfolio",PortfolioRouter);
+app.use("/st-digital-icon",stDigitalIconRouter);
+app.use("/st-digital-image",stDigitalImageRouter);
+
 
 app.listen(process.env.PORT||8000, ()=>{
     console.log("server is running......")
