@@ -14,6 +14,9 @@ const PortfolioRouter =require("./routes/PortfolioRoute/PortfolioRouter")
 const stDigitalIconRouter = require("./routes/StDigitalRoute/stDigitaliconRouter");
 const stDigitalImageRouter = require("./routes/StDigitalRoute/stDigitalImageRouter");
 const PartnerRouter = require("./routes/PartnerRoute/Partroute")
+const JoinUsRouter = require("./routes/joinusRoute/JoinUsRouter")
+const WeDevelopRouter = require("./routes/wedevelopRoute/WeDevelopRoute")
+
 
 /////////////////////////////////////////////////
 dotenv.config()
@@ -25,7 +28,7 @@ mongoose.connect((process.env.MONGODB_URL),() => {
 app.use(cors())
 app.use(morgan("common"))
     app.use(bodyParser.json({limit:"50mb"}))
-////////////////////////////////////////////////////////////////////
+//////////////////---------------ROUTE----------//////////////////////////////////////////////////
 app.use("/fe02-typical",FE02TypicalRouter);
 app.use("/fe07-div1",Fe07Div01Router);
 app.use("/fe07-div2",Fe07Div02Router);
@@ -33,8 +36,12 @@ app.use("/portfolio",PortfolioRouter);
 app.use("/st-digital-icon",stDigitalIconRouter);
 app.use("/st-digital-image",stDigitalImageRouter);
 app.use("/partner",PartnerRouter);
+app.use("/join-us",JoinUsRouter);
+app.use("/we-develop",WeDevelopRouter);
 
 
+
+//////////////////-----------------------------////////////////////////////////////////////////
 app.listen(process.env.PORT||8000, ()=>{
     console.log("server is running......")
 });
