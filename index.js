@@ -13,7 +13,7 @@ const Fe07Div02Router =require("./routes/FE07STSOFTWARERoute/FE07Div2Router")
 const PortfolioRouter =require("./routes/PortfolioRoute/PortfolioRouter")
 const stDigitalIconRouter = require("./routes/StDigitalRoute/stDigitaliconRouter");
 const stDigitalImageRouter = require("./routes/StDigitalRoute/stDigitalImageRouter");
-
+const PartnerRouter = require("./routes/PartnerRoute/Partroute")
 
 /////////////////////////////////////////////////
 dotenv.config()
@@ -32,6 +32,7 @@ app.use("/fe07-div2",Fe07Div02Router);
 app.use("/portfolio",PortfolioRouter);
 app.use("/st-digital-icon",stDigitalIconRouter);
 app.use("/st-digital-image",stDigitalImageRouter);
+app.use("/partner",PartnerRouter);
 
 
 app.listen(process.env.PORT||8000, ()=>{
