@@ -16,7 +16,7 @@ const stDigitalImageRouter = require("./routes/StDigitalRoute/stDigitalImageRout
 const PartnerRouter = require("./routes/PartnerRoute/Partroute")
 const JoinUsRouter = require("./routes/joinusRoute/JoinUsRouter")
 const WeDevelopRouter = require("./routes/wedevelopRoute/WeDevelopRoute")
-const IncubationRouter = require("./routes/incubationRoute/IncubationRoute")
+const IncubationRouter = require("./routes/IncubationRoute/IncubationRoute")
 const routerIncubationText =require("./routes/IncubationRoute/IncubationTextRout")
 /////////////////////////////////////////////////
 dotenv.config()
