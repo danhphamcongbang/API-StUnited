@@ -16,8 +16,8 @@ const stDigitalImageRouter = require("./routes/StDigitalRoute/stDigitalImageRout
 const PartnerRouter = require("./routes/PartnerRoute/Partroute")
 const JoinUsRouter = require("./routes/joinusRoute/JoinUsRouter")
 const WeDevelopRouter = require("./routes/wedevelopRoute/WeDevelopRoute")
-
-
+const IncubationRouter = require("./routes/incubationRoute/IncubationRoute")
+const routerIncubationText =require("./routes/IncubationRoute/IncubationTextRout")
 /////////////////////////////////////////////////
 dotenv.config()
 mongoose.set('strictQuery', true);
@@ -38,6 +38,8 @@ app.use("/st-digital-image",stDigitalImageRouter);
 app.use("/partner",PartnerRouter);
 app.use("/join-us",JoinUsRouter);
 app.use("/we-develop",WeDevelopRouter);
+app.use("/incubation",IncubationRouter);
+app.use("/incubation-1",routerIncubationText);
 
 
 
