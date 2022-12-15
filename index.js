@@ -39,7 +39,7 @@ app.use("/partner",PartnerRouter);
 app.use("/join-us",JoinUsRouter);
 app.use("/we-develop",WeDevelopRouter);
 app.use("/incubation",IncubationRouter);
-app.use("/incubation-1",routerIncubationText);
+app.use("/incubation-1",routerIncubationText) ;
 
 
 
