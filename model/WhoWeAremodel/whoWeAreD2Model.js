@@ -1,18 +1,16 @@
 const mongoose= require('mongoose');
 const mongodb =require ("mongodb");
 
-const WhoWeAreUser = new mongoose.Schema({
-    name:{
+const WhoWeAreD2Model = new mongoose.Schema({
+    title:{
         type:String,
     },
-    position:{
-        type:String,
-    },
-    image:{
+    text:{
         type:String,
     },
     id:{
         type: mongoose.Schema.Types.ObjectId
     }
 })
-module.exports =mongoose.model("whowearedUser",WhoWeAreUser)
+module.exports =mongoose.model("whoweared2",WhoWeAreD2Model)
+
