@@ -5,8 +5,9 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const morgan = require('morgan');
 const dotenv = require("dotenv");
-//////////////////////////////////////////////////////////////////////////////
 
+
+//////////////--------------Declare Route------------------------/////////////////////////////
 const FE02TypicalRouter = require("./routes/FE02TypicalRoute/FE02Typical")
 const Fe07Div01Router =require("./routes/FE07STSOFTWARERoute/FE07Div1Router")
 const Fe07Div02Router =require("./routes/FE07STSOFTWARERoute/FE07Div2Router")
@@ -18,7 +19,12 @@ const JoinUsRouter = require("./routes/joinusRoute/JoinUsRouter")
 const WeDevelopRouter = require("./routes/wedevelopRoute/WeDevelopRoute")
 const IncubationRouter = require("./routes/IncubationRoute/IncubationRoute")
 const routerIncubationText =require("./routes/IncubationRoute/IncubationTextRout")
-/////////////////////////////////////////////////
+const WhoWeAreD1Router = require("./routes/WhoWeAreRoute/WhoWeare")
+const WhoWeAreD2Router = require("./routes/WhoWeAreRoute/WhoWeareD2")
+const WhoWeAreUsersRouter = require("./routes/WhoWeAreRoute/WhoWeAreUser")
+//-------------------------------------------------------------------------------------------
+
+
 dotenv.config()
 mongoose.set('strictQuery', true);
 
@@ -40,10 +46,11 @@ app.use("/join-us",JoinUsRouter);
 app.use("/we-develop",WeDevelopRouter);
 app.use("/incubation",IncubationRouter);
 app.use("/incubation-1",routerIncubationText) ;
+app.use("/who-we-are-d1",WhoWeAreD1Router) ;
+app.use("/who-we-are-d2",WhoWeAreD2Router) ;
+app.use("/who-we-are-user",WhoWeAreUsersRouter) ;
 
-
-
-//////////////////-----------------------------////////////////////////////////////////////////
+//-------------------------------------------------------------------------------------------
 app.listen(process.env.PORT||8000, ()=>{
     console.log("server is running......")
 });

@@ -32,6 +32,10 @@ const IncubationSchema = new mongoose.Schema({
     },
     id:{
         type: mongoose.Schema.Types.ObjectId,
+    },
+    logos:{
+        type: [String]
     }
+
 })
 module.exports =mongoose.model("incubation",IncubationSchema)
