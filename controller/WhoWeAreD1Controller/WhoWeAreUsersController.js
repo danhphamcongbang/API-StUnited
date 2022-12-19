@@ -1,4 +1,4 @@
-const whowearedUser = require("../../model/WhoWeAremodel/WhoWeAreUser");
+const whowearedUser = require("../../model/WhoWeAremodel/whoWeAreUser");
 const WhoWeAreUserController = {
     addWhoWeAreUser :async (req, res) => {
         try{
